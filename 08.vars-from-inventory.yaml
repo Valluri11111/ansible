@@ -1,0 +1,6 @@
+- name: Variables from Prompt
+  hosts: web
+  tasks:
+  - name: Print the course Information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Learning is: {{LEARNING}}"
