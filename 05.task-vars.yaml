@@ -1,0 +1,20 @@
+- name: Variables to Print
+  hosts: web
+  vars:  # Play Level, All tasks in this Play have access to this....
+    COURSE: DevOps
+    DURATION: 100 HRS
+    LEARNING: SELF
+  tasks:
+  - name: Print the Information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Learning is: {{LEARNING}}"
+      
+  - name: Print the Information Again
+    vars: # Task level Variables Override by Play level
+      COURSE: Ansible
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Learning is: {{LEARNING}}"
+
+  - name: Print the Information Again and Again
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Learning is: {{LEARNING}}"
