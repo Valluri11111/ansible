@@ -14,5 +14,5 @@
       COURSE: DevOps from TASK LEVEL
       DURATION: 100 HRS
       LEARNING: SELF
-    ansible.builtin.debug:
+  ansible.builtin.debug:
       msg: "Hi, I am learning {{COURSE}}"
