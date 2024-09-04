@@ -1,4 +1,4 @@
-- name: Variables from Prompt
+- name: Variables to print
   hosts: web
   vars:
     COURSE: "DevOps from PLAY LEVEL"
