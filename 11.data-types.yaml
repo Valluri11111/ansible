@@ -17,6 +17,9 @@
       ci: jenkins
       cm: Ansible
       cloud: aws
+      aws:
+      - IAM
+      - EC2
   tasks:
   - name: Print the Information
     ansible.builtin.debug:
