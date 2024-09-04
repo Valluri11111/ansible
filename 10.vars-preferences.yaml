@@ -1,9 +1,9 @@
 - name: Variables from Prompt
   hosts: web
   vars:
-    COURSE: DevOps from PLAY LEVEL
-    DURATION: 100 HRS
-    LEARNING: SELF
+    COURSE: "DevOps from PLAY LEVEL"
+    DURATION: "100 HRS"
+    LEARNING: "SELF"
   vars_prompt:
   - name: COURSE
     prompt: Please enter the course
@@ -11,8 +11,8 @@
   tasks:
   - name: Print the course Information
   vars:
-      COURSE: DevOps from TASK LEVEL
-      DURATION: 100 HRS
-      LEARNING: SELF
+      COURSE: "DevOps from TASK LEVEL"
+      DURATION: "100 HRS"
+      LEARNING: "SELF"
   ansible.builtin.debug:
     msg: "Hi, I am learning {{COURSE}}"
