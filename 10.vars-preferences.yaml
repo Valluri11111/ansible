@@ -8,12 +8,6 @@
   - name: COURSE
     prompt: Please enter the course
     private: false # Information Will be Shown In TERMINAL
-  - name: DURATION
-    prompt: Please enter the duration
-    private: false # Information Will be Shown In TERMINAL
-  - name: LEARNING
-    prompt: Enter Training Mode
-    private: false # Information Will be Shown In TERMINAL
   tasks:
   - name: Print the course Information
   vars:
@@ -21,4 +15,4 @@
       DURATION: 100 HRS
       LEARNING: SELF
     ansible.builtin.debug:
-      msg: "Hi, I am learning {{COURSE}}, Duration is: {{DURATION}}, Learning is: {{LEARNING}}"
+      msg: "Hi, I am learning {{COURSE}}"
