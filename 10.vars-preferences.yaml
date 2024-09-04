@@ -1,4 +1,4 @@
-- name: variables to print
+-name: variables to print
   hosts: web
   vars:
     COURSE: "DevOps from PLAY LEVEL"
