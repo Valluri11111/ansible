@@ -43,8 +43,7 @@
   
   - name: Check the IP Address
     vars:
-      my IP: "198.827.991.12"
+      myip: "198.827.991.12"
     ansible.builtin.debug:
-      msg: "{{ my IP | ansible.utils.ipv4 }}"
+      msg: "{{ myip | ansible.utils.ipv4 }}"
 
-      
