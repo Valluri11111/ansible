@@ -8,5 +8,5 @@
   - name: convert to upper
     vars:
       greeting: "Hello Rajesh"
-      ansible.builtin.debug:
-        msg: "{{ greeting | upper}}"
+    ansible.builtin.debug:
+      msg: "{{ greeting | upper}}"
