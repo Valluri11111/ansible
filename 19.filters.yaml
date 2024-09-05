@@ -4,3 +4,9 @@
   - name: Print the Default Values
     ansible.builtin.debug:
       msg: "Hello {{ course | default ('Ansible')}}"
+
+  - name: convert to upper
+    vars:
+      greeting: "Hello Rajesh"
+      ansible.builtin.debug:
+        msg: "{{ greeting | upper}}"
