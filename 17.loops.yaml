@@ -1,0 +1,13 @@
+- name: loops demo
+  hosts: web
+  become: yes
+  tasks:
+  - name: Print the Packages
+    ansible.builtin.package:
+      name: "Package is: {{ item }}"
+      state: present
+    loop:
+    - nginx
+    - mysql
+    - postfix
+    - nagios
