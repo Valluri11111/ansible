@@ -39,4 +39,12 @@
         learning: "Self"
     ansible.builtin.debug:
       msg: " {{ course | dict2items }}"
+
+  
+  - name: Check the IP Address
+    vars:
+      my IP: "198.827.991.12"
+    ansible.builtin.debug:
+      msg: "{{ my IP | ansible.utils.ipv4 }}"
+
       
