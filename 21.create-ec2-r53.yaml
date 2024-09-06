@@ -9,6 +9,7 @@
     - MySQL
     - Backend
     - Frontend
+     zone: rajeshvalluri.online
   tasks:
   - name: create ec2 user
     amazon.aws.ec2_instance:
@@ -34,5 +35,4 @@
       value: " {{ item.instance[0].private_ip_address }}"
       wait: true
       overwrite: true
-    loop: " {{ ec2_instance.results }}"
-    
+    loop: " {{ ec2_instances.results }}"
