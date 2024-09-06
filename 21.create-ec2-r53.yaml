@@ -23,3 +23,16 @@
   - name: Print the Output
     ansible.builtin.debug:
       msg: " {{ ec2_instances }}"
+
+  - name: Create R53 Records
+    amazon.aws.route53:
+      state: present
+      zone: " {{ zone }}"
+      record: " {{ item.item }}.{{ zone }}" #Mysql.rajeshvalluri.online
+      type: A
+      ttl: 1
+      value: " {{ item.instance[0].private_ip_address }}"
+      wait: true
+      overwrite: true
+    loop: " {{ ec2_instance.results }}"
+    
