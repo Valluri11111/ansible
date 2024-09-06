@@ -9,7 +9,7 @@
     - MySQL
     - Backend
     - Frontend
-     zone: rajeshvalluri.online
+    zone: rajeshvalluri.online
   tasks:
   - name: create ec2 user
     amazon.aws.ec2_instance:
